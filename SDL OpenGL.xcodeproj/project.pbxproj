@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		451B18A91DFE57C90095FA4F /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 451B18A81DFE57C90095FA4F /* main.cpp */; };
+		451B18B01DFE58130095FA4F /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 451B18AF1DFE58130095FA4F /* OpenGL.framework */; };
+		451B18B41DFE58770095FA4F /* libGLEW.2.0.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 451B18B31DFE58770095FA4F /* libGLEW.2.0.0.dylib */; };
+		451B18B61DFE58890095FA4F /* libSDL2-2.0.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 451B18B51DFE58890095FA4F /* libSDL2-2.0.0.dylib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +28,10 @@
 /* Begin PBXFileReference section */
 		451B18A51DFE57C90095FA4F /* SDL OpenGL */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "SDL OpenGL"; sourceTree = BUILT_PRODUCTS_DIR; };
 		451B18A81DFE57C90095FA4F /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		451B18AF1DFE58130095FA4F /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
+		451B18B11DFE582B0095FA4F /* Cellar */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Cellar; path = ../../../../../usr/local/Cellar; sourceTree = "<group>"; };
+		451B18B31DFE58770095FA4F /* libGLEW.2.0.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libGLEW.2.0.0.dylib; path = ../../../../../usr/local/Cellar/glew/2.0.0/lib/libGLEW.2.0.0.dylib; sourceTree = "<group>"; };
+		451B18B51DFE58890095FA4F /* libSDL2-2.0.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libSDL2-2.0.0.dylib"; path = "../../../../../usr/local/Cellar/sdl2/2.0.5/lib/libSDL2-2.0.0.dylib"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +39,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				451B18B61DFE58890095FA4F /* libSDL2-2.0.0.dylib in Frameworks */,
+				451B18B41DFE58770095FA4F /* libGLEW.2.0.0.dylib in Frameworks */,
+				451B18B01DFE58130095FA4F /* OpenGL.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -41,6 +51,10 @@
 		451B189C1DFE57C90095FA4F = {
 			isa = PBXGroup;
 			children = (
+				451B18B51DFE58890095FA4F /* libSDL2-2.0.0.dylib */,
+				451B18B31DFE58770095FA4F /* libGLEW.2.0.0.dylib */,
+				451B18B11DFE582B0095FA4F /* Cellar */,
+				451B18AF1DFE58130095FA4F /* OpenGL.framework */,
 				451B18A71DFE57C90095FA4F /* SDL OpenGL */,
 				451B18A61DFE57C90095FA4F /* Products */,
 			);
@@ -207,6 +221,12 @@
 		451B18AD1DFE57C90095FA4F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				HEADER_SEARCH_PATHS = /usr/local/include;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/usr/local/Cellar/glew/2.0.0/lib,
+					/usr/local/Cellar/sdl2/2.0.5/lib,
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -214,6 +234,12 @@
 		451B18AE1DFE57C90095FA4F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				HEADER_SEARCH_PATHS = /usr/local/include;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/usr/local/Cellar/glew/2.0.0/lib,
+					/usr/local/Cellar/sdl2/2.0.5/lib,
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
